@@ -1,7 +1,7 @@
 FChat
 =====
 
-FChat is a IM tool which is created by firekyrin, and it implies with nodjs, socket.io and express
+FChat is a Instant Messenager(IM) tool which is created by firekyrin, and it implies with nodjs, socket.io and express
 
 Author
 ======

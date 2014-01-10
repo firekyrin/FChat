@@ -1,0 +1,95 @@
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <title>FChat</title>
+		<link href="/js/fkr-style.css" rel="stylesheet" type="text/css" />
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/jquery-1.7.2.min.js"></script> 
+		<script src="/js/script.js"></script> 
+		<style type="text/css"> 
+			#content { width: 600px; margin: 0 auto; } 
+			textarea { width: 400px; height: 40px;} 
+		</style> 
+	</head> 
+
+	<body onload="loader()">
+
+		<div id="fkr-container-1" class="fkr-chat fkr-chat-360p">
+                        <div class="fkr-header">
+                           <div class="fkr-back">
+                           </div>
+                           <div class="fkr-title">
+                                FChat
+                           </div>
+                           <div class="fkr-search">
+                           </div>
+                        </div>
+                        <div class="fkr-controls-holder">
+                                <ul class="fkr-controls">
+                                        Username:<input id="username_input" placeholder="FChat" type="text">
+                                </ul>
+                        </div>
+                        <button id="login" class="button" onclick="login()">Login</button>
+                </div>
+
+
+		<!-- User List Page Begin -->
+		<div id="fkr-container-2" class="fkr-chat fkr-chat-360p">
+			<div class="fkr-header">
+			   <div class="fkr-back">
+			   
+			   </div>
+			   <div class="fkr-title">
+			   	FChat
+			   </div>
+			   <div class="fkr-search">
+			   	<!-- button onclick="go_search()" id="go_search">Search</button -->
+			   </div>
+			</div>
+
+			<div class="fkr-controls-friend">
+				<ul id="user_list">
+					<li> test-user1</li>
+					<li> test-user2</li>
+					<li> test-user3</li>
+					<li> test-user4</li>
+					
+
+				</ul>
+				
+			</div>
+		</div>
+	
+		<!-- User List Page End -->
+
+		<!-- Chat Detail Page Begin -->
+		<div id="fkr-container-3" class="fkr-chat fkr-chat-360p">
+                        <div class="fkr-header">
+                           <div class="fkr-back">
+                           <button onclick="goback();">Back</button>
+                           </div>
+                           <div id="title-nick" class="fkr-title">
+                                usernameasd
+                           </div>
+                           <div class="fkr-search">
+                           </div>
+                        </div>
+
+                        <div class="fkr-chat-details">
+
+                         Incoming Chat:&nbsp;<ul id="incomingChatMessages" style="height:250px;overflow:scroll"></ul>
+                </div>
+                    <div class="fkr-repeat">
+                        <div class="fkr-chat-repeat">
+                           Reply:<input type="text" style="width:180px" id="outgoingChatMessage" onkeypress="keypress_cb();">
+                        </div>
+                            <div class="fkr-send">
+                           <button id="send" onclick="repeat();">Send</button>
+                        </div>
+                        </div>
+                </div>
+		<!-- Chat Detail Page End -->
+		<script src="js/userlist.js"></script> 
+		<div id="ulist"></div>
+	</body> 
+</html>

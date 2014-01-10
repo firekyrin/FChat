@@ -1,0 +1,9 @@
+FChat 1.0 -- firekyrin
+======================
+1.add style.css style to FChat
+2.add script.js to FChat
+3.add userlist.js to FChat
+4.add app.js according to socket.io
+5.create index.html page
+
+
